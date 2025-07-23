@@ -120,4 +120,4 @@ To run this project:
 
 The project includes code to visualize the agent's performance during the test episode. A GIF `taxi_agent_performance.gif` is generated, showing the taxi's movements, passenger pickup, and dropoff in real-time.
 
-*`![Taxi Agent Performance](taxi_agent_behavior.gif)`)`*
+![Taxi Agent Performance](taxi_agent_behavior.gif)
