@@ -1,12 +1,12 @@
 # Reinforcement Learning for Optimal Taxi Navigation (Taxi-v3)
 
-## 1. Project Overview
+## Project Overview
 
 This project implements a Reinforcement Learning (RL) agent to solve the classic **Taxi-v3 environment** from the Gymnasium library. The primary goal is to train an autonomous taxi agent to efficiently pick up a passenger from a designated location and drop them off at their desired destination within a simulated 5x5 urban grid. The agent learns to navigate, pick up, and drop off passengers by maximizing cumulative rewards through a trial-and-error process.
 
 The motivation behind this project is to explore fundamental concepts of Reinforcement Learning, specifically Q-learning, and apply them to a practical pathfinding and decision-making problem.
 
-## 2. The Taxi-v3 Environment
+## The Taxi-v3 Environment
 
 The `Taxi-v3` environment is a strategic simulation on a 5x5 grid.
 
@@ -37,7 +37,7 @@ The environment provides feedback to the agent through a reward system:
 * `-10`: For illegal pickup or dropoff actions (discourages invalid moves).
 * `-1`: For attempting to move into a wall (incurs time step penalty without position change).
 
-## 3. Reinforcement Learning Approach: Q-Learning
+## Reinforcement Learning Approach: Q-Learning
 
 This project uses **Q-learning**, a model-free, off-policy temporal difference reinforcement learning algorithm.
 
@@ -60,7 +60,7 @@ This project uses **Q-learning**, a model-free, off-policy temporal difference r
     * With probability $1-\epsilon$, the action with the highest Q-value is chosen.
     * $\epsilon$ typically decays over time.
 
-## 4. Implementation Details
+## Implementation Details
 
 The agent was trained over **2,000 episodes**, with a maximum of **100 actions** per training episode (`max_actions`).
 
@@ -86,7 +86,7 @@ The agent was trained over **2,000 episodes**, with a maximum of **100 actions**
         * At the end of the episode, the total reward is recorded, and `epsilon` is decayed.
 3.  **Policy Extraction:** After training, the optimal policy is derived by selecting the action with the highest Q-value for each state in the Q-table.
 
-## 5. Results
+## Results
 
 The trained agent's performance was evaluated in a single test episode, starting with a seed of 42 and limited to a maximum of 16 actions.
 
@@ -95,7 +95,7 @@ The trained agent's performance was evaluated in a single test episode, starting
 
 *(Expected result: `episode_total_reward` should be at least 4, indicating efficient learning.)*
 
-## 6. How to Run
+## How to Run
 
 To run this project:
 
@@ -116,7 +116,7 @@ To run this project:
     ```
     *(Alternatively, if in a Jupyter Notebook, run all cells sequentially.)*
 
-## 7. Visualization
+## Visualization
 
 The project includes code to visualize the agent's performance during the test episode. A GIF `taxi_agent_performance.gif` is generated, showing the taxi's movements, passenger pickup, and dropoff in real-time.
 
